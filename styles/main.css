@@ -29,7 +29,7 @@ main {
 main .design {
   width: 100%;
   height: 28vh;
-  background-image: url("/assets/uiux.svg");
+  background-image: url("../assets/images/uiux.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -58,7 +58,7 @@ main section {
 main section .photography {
   width: 100%;
   height: 28vh;
-  background-image: url("/assets/photogaphy.svg");
+  background-image: url("../assets/images/photography.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -69,7 +69,7 @@ main section .photography {
 main section .animation {
   width: 100%;
   height: 28vh;
-  background-image: url("/assets/animation.svg");
+  background-image: url("../assets/images/animation.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
