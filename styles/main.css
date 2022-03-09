@@ -44,6 +44,36 @@ main .design {
   padding: 1.5rem;
 }
 
+main .design .design-first-row {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .design .design-second-row {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .design .design-second-row img {
+  width: 3rem;
+  height: 3rem;
+}
+
 main section {
   width: 100%;
   height: auto;
@@ -71,6 +101,36 @@ main section .photography {
   padding: 1.5rem;
 }
 
+main section .photography .photography-first-row {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section .photography .photography-second-row {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main section .photography .photography-second-row img {
+  width: 3rem;
+  height: 3rem;
+}
+
 main section .animation {
   width: 100%;
   height: 25vh;
@@ -80,6 +140,36 @@ main section .animation {
   background-position: center;
   border-radius: 6px;
   padding: 1.5rem;
+}
+
+main section .animation .animation-first-row {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section .animation .animation-second-row {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main section .animation .animation-second-row img {
+  width: 3rem;
+  height: 3rem;
 }
 
 @media screen and (min-width: 768px) {
