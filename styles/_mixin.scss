@@ -1,0 +1,10 @@
+@mixin query($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin cardEffect {
+  transform: translateY(-3px);
+  filter: grayscale(20%);
+}

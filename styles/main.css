@@ -15,10 +15,10 @@ html {
 
 body {
   font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(.9rem + 0.33vw);
+  font-size: calc(0.9rem + 0.33vw);
   max-width: 100vw;
   min-height: 100vh;
-  background-color: #F5F5FB;
+  background-color: #f5f5fb;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 15% 60% 25%;
@@ -30,6 +30,7 @@ body {
 
 main {
   min-height: 80vh;
+  padding: 1.5rem 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,10 +54,10 @@ main .searchbox input {
   border: none;
   border-radius: 5px;
   outline: none;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   width: 50%;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 main .searchbox input:focus {
@@ -67,6 +68,12 @@ main .searchbox svg {
   width: 2rem;
   height: 2.5rem;
   stroke: #768492;
+  -webkit-transition: stroke 200ms ease-in;
+  transition: stroke 200ms ease-in;
+}
+
+main .searchbox svg:hover {
+  stroke: #000;
 }
 
 main .main-navigation {
@@ -81,6 +88,17 @@ main .main-navigation {
           justify-content: space-between;
 }
 
+main .main-navigation h3 {
+  -webkit-transition: color 200ms ease-in;
+  transition: color 200ms ease-in;
+}
+
+main .main-navigation h3:hover {
+  color: #768492;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
 main .main-navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,8 +106,14 @@ main .main-navigation ul {
 }
 
 main .main-navigation ul li {
-  margin-left: calc(.5rem + .33vw);
+  margin-left: calc(0.5rem + 0.33vw);
   color: #768492;
+  -webkit-transition: color 200ms ease-in;
+  transition: color 200ms ease-in;
+}
+
+main .main-navigation ul li:hover {
+  color: #000;
 }
 
 main .design {
@@ -103,12 +127,21 @@ main .design {
   color: #fff;
   margin-bottom: 2.4rem;
   padding: 1.5rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
   main .design {
     height: 19rem;
   }
+}
+
+main .design:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-filter: grayscale(20%);
+          filter: grayscale(20%);
 }
 
 main .design .design-first-row {
@@ -166,12 +199,21 @@ main section .photography {
   background-position: center;
   border-radius: 6px;
   padding: 1.5rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
   main section .photography {
     height: 19rem;
   }
+}
+
+main section .photography:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-filter: grayscale(20%);
+          filter: grayscale(20%);
 }
 
 main section .photography .photography-first-row {
@@ -213,12 +255,21 @@ main section .animation {
   background-position: center;
   border-radius: 6px;
   padding: 1.5rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
   main section .animation {
     height: 19rem;
   }
+}
+
+main section .animation:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-filter: grayscale(20%);
+          filter: grayscale(20%);
 }
 
 main section .animation .animation-first-row {
