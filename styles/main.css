@@ -351,7 +351,6 @@ main section .animation .animation-second-row img {
 }
 
 .rightContainer .rightContainer-progress form {
-  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,25 +364,32 @@ main section .animation .animation-second-row img {
   row-gap: 1.5rem;
 }
 
+.rightContainer .rightContainer-progress form small {
+  color: #83919E;
+}
+
 .rightContainer .rightContainer-progress form label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+  -webkit-column-gap: .3rem;
+          column-gap: .3rem;
 }
 
-.rightContainer .rightContainer-progress form label span {
+.rightContainer .rightContainer-progress form label .progress-design-bgc,
+.rightContainer .rightContainer-progress form label .progress-photography-bgc,
+.rightContainer .rightContainer-progress form label .progress-animation-bgc {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 3px;
-  background-color: gray;
   display: inline-block;
   position: relative;
 }
 
-.rightContainer .rightContainer-progress form label span img {
-  width: 1.9rem;
+.rightContainer .rightContainer-progress form label .progress-design-bgc img,
+.rightContainer .rightContainer-progress form label .progress-photography-bgc img,
+.rightContainer .rightContainer-progress form label .progress-animation-bgc img {
+  width: 1.6rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -391,7 +397,20 @@ main section .animation .animation-second-row img {
           transform: translate(-50%, -50%);
 }
 
+.rightContainer .rightContainer-progress form label .progress-design-bgc {
+  background-color: rgba(94, 129, 244, 0.3);
+}
+
+.rightContainer .rightContainer-progress form label .progress-photography-bgc {
+  background-color: rgba(12, 195, 231, 0.3);
+}
+
+.rightContainer .rightContainer-progress form label .progress-animation-bgc {
+  background-color: rgba(255, 128, 139, 0.3);
+}
+
 .rightContainer .rightContainer-progress form label progress {
-  width: 50%;
+  width: 40%;
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

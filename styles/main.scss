@@ -225,6 +225,7 @@ main {
     }
   }
 }
+
 .rightContainer {
   height: calc(90% - 10px);
   padding: 1rem;
@@ -249,41 +250,55 @@ main {
   }
 
   .rightContainer-progress {
-    
     h4 {
       margin-bottom: 2rem;
     }
 
     form {
-      width: 90%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       row-gap: 1.5rem;
 
+      small {
+        color: #83919E;
+      }
+
       label {
         display: flex;
-        column-gap: 2rem;
+        column-gap: .3rem;
 
-        span {
+        .progress-design-bgc,
+        .progress-photography-bgc,
+        .progress-animation-bgc {
           width: 2.5rem;
           height: 2.5rem;
           border-radius: 3px;
-          background-color: gray;
           display: inline-block;
           position: relative;
-    
+
           img {
-            width: 1.9rem;
+            width: 1.6rem;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
           }
         }
-  
+
+        .progress-design-bgc {
+          background-color: rgba(94, 129, 244, 0.3);
+        }
+        .progress-photography-bgc {
+          background-color: rgba(12, 195, 231, 0.3);
+        }
+        .progress-animation-bgc {
+          background-color: rgba(255, 128, 139, 0.3);
+        }
+
         progress {
-          width: 50%;
+          width: 40%;
+          display: none;
         }
       }
     }
