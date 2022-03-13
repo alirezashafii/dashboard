@@ -28,6 +28,28 @@ body {
           align-items: center;
 }
 
+@-webkit-keyframes cardAnimation {
+  from {
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes cardAnimation {
+  from {
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 main {
   height: calc(90% - 10px);
   padding: 1.5rem 0.5rem;
@@ -129,6 +151,12 @@ main .design {
   padding: 1.5rem;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+  -webkit-animation-name: cardAnimation;
+          animation-name: cardAnimation;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @media screen and (min-width: 768px) {
@@ -140,8 +168,6 @@ main .design {
 main .design:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
-  -webkit-filter: grayscale(20%);
-          filter: grayscale(20%);
 }
 
 main .design .design-first-row {
@@ -201,6 +227,12 @@ main section .photography {
   padding: 1.5rem;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+  -webkit-animation-name: cardAnimation;
+          animation-name: cardAnimation;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @media screen and (min-width: 768px) {
@@ -212,8 +244,6 @@ main section .photography {
 main section .photography:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
-  -webkit-filter: grayscale(20%);
-          filter: grayscale(20%);
 }
 
 main section .photography .photography-first-row {
@@ -257,6 +287,12 @@ main section .animation {
   padding: 1.5rem;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+  -webkit-animation-name: cardAnimation;
+          animation-name: cardAnimation;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @media screen and (min-width: 768px) {
@@ -268,8 +304,6 @@ main section .animation {
 main section .animation:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
-  -webkit-filter: grayscale(20%);
-          filter: grayscale(20%);
 }
 
 main section .animation .animation-first-row {
@@ -412,5 +446,11 @@ main section .animation .animation-second-row img {
 .rightContainer .rightContainer-progress form label progress {
   width: 40%;
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .rightContainer .rightContainer-progress form label progress {
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=main.css.map */

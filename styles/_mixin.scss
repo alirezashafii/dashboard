@@ -6,5 +6,10 @@
 
 @mixin cardEffect {
   transform: translateY(-3px);
-  filter: grayscale(20%);
+}
+
+@mixin cardAnimation($duration) {
+  animation-name: cardAnimation;
+  animation-duration: $duration;
+  animation-timing-function: linear;
 }
