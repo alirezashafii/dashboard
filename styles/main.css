@@ -29,29 +29,55 @@ body {
 }
 
 @-webkit-keyframes cardAnimation {
-  from {
-    -webkit-transform: scale(0.97);
-            transform: scale(0.97);
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
-  to {
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
 }
 
 @keyframes cardAnimation {
-  from {
-    -webkit-transform: scale(0.97);
-            transform: scale(0.97);
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
-  to {
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
 }
 
+@-webkit-keyframes progressAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes progressAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 main {
-  height: calc(90% - 10px);
+  height: calc(95% - 10px);
   padding: 1.5rem 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -346,7 +372,7 @@ main section .animation .animation-second-row img {
 }
 
 .rightContainer {
-  height: calc(90% - 10px);
+  height: calc(95% - 10px);
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,15 +425,22 @@ main section .animation .animation-second-row img {
 }
 
 .rightContainer .rightContainer-progress form small {
-  color: #83919E;
+  color: #83919e;
 }
 
 .rightContainer .rightContainer-progress form label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: .3rem;
-          column-gap: .3rem;
+  -webkit-column-gap: 0.3rem;
+          column-gap: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .rightContainer .rightContainer-progress form label {
+    -webkit-column-gap: 0.9rem;
+            column-gap: 0.9rem;
+  }
 }
 
 .rightContainer .rightContainer-progress form label .progress-design-bgc,
@@ -445,6 +478,15 @@ main section .animation .animation-second-row img {
 
 .rightContainer .rightContainer-progress form label progress {
   width: 40%;
+  height: 9px;
+  border-radius: 9px;
+  -webkit-box-shadow: 1px 1px 4px rgba(239, 239, 239, 0.5);
+          box-shadow: 1px 1px 4px rgba(239, 239, 239, 0.5);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-animation: progressAnimation 1s linear;
+          animation: progressAnimation 1s linear;
   display: none;
 }
 
@@ -452,5 +494,50 @@ main section .animation .animation-second-row img {
   .rightContainer .rightContainer-progress form label progress {
     display: inline-block;
   }
+}
+
+.rightContainer .rightContainer-progress form label #progress-design::-webkit-progress-bar {
+  background-color: #fff;
+  border-radius: 9px;
+}
+
+.rightContainer .rightContainer-progress form label #progress-design::-webkit-progress-value {
+  background-color: #5e81f4;
+  border-radius: 9px;
+}
+
+.rightContainer .rightContainer-progress form label #progress-design::-moz-progress-bar {
+  background-color: #5e81f4;
+  border-radius: 9px;
+}
+
+.rightContainer .rightContainer-progress form label #progress-photography::-webkit-progress-bar {
+  background-color: #fff;
+  border-radius: 9px;
+}
+
+.rightContainer .rightContainer-progress form label #progress-photography::-webkit-progress-value {
+  background-color: #0cc3e7;
+  border-radius: 9px;
+}
+
+.rightContainer .rightContainer-progress form label #progress-photography::-moz-progress-bar {
+  background-color: #0cc3e7;
+  border-radius: 9px;
+}
+
+.rightContainer .rightContainer-progress form label #progress-animation::-webkit-progress-bar {
+  background-color: #fff;
+  border-radius: 9px;
+}
+
+.rightContainer .rightContainer-progress form label #progress-animation::-webkit-progress-value {
+  background-color: #ff808b;
+  border-radius: 9px;
+}
+
+.rightContainer .rightContainer-progress form label #progress-animation::-moz-progress-bar {
+  background-color: #ff808b;
+  border-radius: 9px;
 }
 /*# sourceMappingURL=main.css.map */

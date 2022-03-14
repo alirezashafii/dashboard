@@ -26,16 +26,28 @@ body {
 @import "mixin";
 
 @keyframes cardAnimation {
-  from {
-    transform: scale(0.97);
+  0% {
+    transform: scale(0.9);
   }
-  to {
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
     transform: scale(1);
   }
 }
 
+@keyframes progressAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 main {
-  height: calc(90% - 10px);
+  height: calc(95% - 10px);
   padding: 1.5rem 0.5rem;
   display: flex;
   flex-direction: column;
@@ -242,7 +254,7 @@ main {
 }
 
 .rightContainer {
-  height: calc(90% - 10px);
+  height: calc(95% - 10px);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -276,12 +288,16 @@ main {
       row-gap: 1.5rem;
 
       small {
-        color: #83919E;
+        color: #83919e;
       }
 
       label {
         display: flex;
-        column-gap: .3rem;
+        column-gap: 0.3rem;
+
+        @include query(768px) {
+          column-gap: 0.9rem;
+        }
 
         .progress-design-bgc,
         .progress-photography-bgc,
@@ -313,14 +329,63 @@ main {
 
         progress {
           width: 40%;
+          height: 9px;
+          border-radius: 9px;
+          box-shadow: 1px 1px 4px rgba(239, 239, 239, 0.5);
+          align-self: center;
+          animation: progressAnimation 1s linear;
           display: none;
-
-          
 
           @include query(768px) {
             display: inline-block;
           }
         }
+
+        #progress-design {
+          &::-webkit-progress-bar {
+            background-color: #fff;
+            border-radius: 9px;
+          }
+          &::-webkit-progress-value {
+            background-color: rgb(94, 129, 244);
+            border-radius: 9px;
+          }
+          &::-moz-progress-bar {
+            background-color: rgb(94, 129, 244);
+            border-radius: 9px;
+          }
+        }
+
+        #progress-photography {
+          &::-webkit-progress-bar {
+            background-color: #fff;
+            border-radius: 9px;
+          }
+          &::-webkit-progress-value {
+            background-color: rgb(12, 195, 231);
+            border-radius: 9px;
+          }
+          &::-moz-progress-bar {
+            background-color: rgb(12, 195, 231);
+            border-radius: 9px;
+          }
+        }
+
+        #progress-animation {
+          &::-webkit-progress-bar {
+            background-color: #fff;
+            border-radius: 9px;
+          }
+          &::-webkit-progress-value {
+            background-color: rgb(255, 128, 139);
+            border-radius: 9px;
+          }
+          &::-moz-progress-bar {
+            background-color: rgb(255, 128, 139);
+            border-radius: 9px;
+          }
+        }
+        
       }
     }
   }
