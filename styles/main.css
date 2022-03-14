@@ -28,6 +28,20 @@ body {
           align-items: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    -ms-grid-columns: 20% 50% 30%;
+        grid-template-columns: 20% 50% 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    -ms-grid-columns: 20% 50% 30%;
+        grid-template-columns: 20% 50% 30%;
+  }
+}
+
 @-webkit-keyframes cardAnimation {
   0% {
     -webkit-transform: scale(0.9);
@@ -432,7 +446,7 @@ main section .animation .animation-second-row img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .rightContainer .rightContainer-profile img {
@@ -443,6 +457,10 @@ main section .animation .animation-second-row img {
 
 .rightContainer .rightContainer-profile p {
   margin-left: calc(0.5rem + 0.33vw);
+}
+
+.rightContainer .rightContainer-progress {
+  margin-bottom: 4rem;
 }
 
 .rightContainer .rightContainer-progress h4 {
@@ -465,14 +483,15 @@ main section .animation .animation-second-row img {
 
 .rightContainer .rightContainer-progress form small {
   color: #83919e;
+  font-weight: 300;
 }
 
 .rightContainer .rightContainer-progress form label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 0.3rem;
-          column-gap: 0.3rem;
+  -webkit-column-gap: 0.4rem;
+          column-gap: 0.4rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -591,5 +610,62 @@ main section .animation .animation-second-row img {
 .rightContainer .rightContainer-progress form label #progress-animation::-moz-progress-bar {
   background-color: #ff808b;
   border-radius: 9px;
+}
+
+.rightContainer .rightContainer-task {
+  margin-bottom: 4rem;
+}
+
+.rightContainer .rightContainer-task h4 {
+  margin-bottom: 2rem;
+}
+
+.rightContainer .rightContainer-task .taskChild {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  row-gap: 1.5rem;
+}
+
+.rightContainer .rightContainer-task .taskChild small {
+  color: #83919e;
+  font-weight: 300;
+}
+
+.rightContainer .rightContainer-task .taskChild .rightContainer-task__design,
+.rightContainer .rightContainer-task .taskChild .rightContainer-task__animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 0.4rem;
+          column-gap: 0.4rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .rightContainer .rightContainer-task .taskChild .rightContainer-task__design,
+  .rightContainer .rightContainer-task .taskChild .rightContainer-task__animation {
+    -webkit-column-gap: 0.9rem;
+            column-gap: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rightContainer .rightContainer-task .taskChild .rightContainer-task__design,
+  .rightContainer .rightContainer-task .taskChild .rightContainer-task__animation {
+    -webkit-column-gap: 1.5rem;
+            column-gap: 1.5rem;
+  }
+}
+
+.rightContainer .rightContainer-task .taskChild .rightContainer-task__design img,
+.rightContainer .rightContainer-task .taskChild .rightContainer-task__animation img {
+  width: 1.6rem;
 }
 /*# sourceMappingURL=main.css.map */
