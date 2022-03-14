@@ -185,9 +185,15 @@ main .design {
           animation-timing-function: linear;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   main .design {
     height: 19rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .design {
+    height: 23rem;
   }
 }
 
@@ -261,9 +267,15 @@ main section .photography {
           animation-timing-function: linear;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   main section .photography {
     height: 19rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main section .photography {
+    height: 23rem;
   }
 }
 
@@ -321,9 +333,15 @@ main section .animation {
           animation-timing-function: linear;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   main section .animation {
     height: 19rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main section .animation {
+    height: 23rem;
   }
 }
 
@@ -362,7 +380,16 @@ main section .animation .animation-second-row img {
   height: 3rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   main section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -381,6 +408,18 @@ main section .animation .animation-second-row img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .rightContainer {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rightContainer {
+    padding: 1rem 4rem;
+  }
 }
 
 .rightContainer .rightContainer-profile {
@@ -436,10 +475,17 @@ main section .animation .animation-second-row img {
           column-gap: 0.3rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .rightContainer .rightContainer-progress form label {
     -webkit-column-gap: 0.9rem;
             column-gap: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rightContainer .rightContainer-progress form label {
+    -webkit-column-gap: 1.5rem;
+            column-gap: 1.5rem;
   }
 }
 
@@ -490,7 +536,13 @@ main section .animation .animation-second-row img {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .rightContainer .rightContainer-progress form label progress {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .rightContainer .rightContainer-progress form label progress {
     display: inline-block;
   }
