@@ -423,6 +423,7 @@ main {
       }
     }
   }
+
   .rightContainer-task {
     margin-bottom: 4rem;
 
@@ -455,6 +456,90 @@ main {
 
         img {
           width: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .rightContainer-card {
+    text-align: center;
+
+    .cardChild {
+      margin: 0 auto;
+      width: 85%;
+      height: 17rem;
+      position: relative;
+      background-color: #fafafa;
+      border-radius: 5px;
+      transition: transform 250ms ease-in;
+
+      &:hover,
+      &:active {
+        transform: scale(1.03);
+      }
+
+      @include query(768) {
+        height: 13rem;
+      }
+      @include query(1024) {
+        width: 80%;
+        height: 14rem;
+      }
+
+      .card-content {
+        width: 95%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        text-align: left;
+
+        p {
+          margin-left: 0.5rem;
+        }
+
+        a img {
+          margin-left: 0.5rem;
+          margin-top: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+  
+      .card-person {
+        width: 4.8rem;
+        height: 9.1rem;
+        position: absolute;
+        bottom: -14px;
+
+        @include query(768) {
+          width: 5.8rem;
+          height: 10.1rem;
+          bottom: -13px;
+        }
+        @include query(1024) {
+          width: 6.8rem;
+          height: 11.1rem;
+          bottom: -13px;
+        }
+      }
+      .card-circle-one {
+        width: 5rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      .card-circle-two {
+        width: 4rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include query(768) {
+          width: 5rem;
+        }
+        @include query(1024) {
+          width: 6rem;
         }
       }
     }

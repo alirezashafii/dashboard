@@ -668,4 +668,109 @@ main section .animation .animation-second-row img {
 .rightContainer .rightContainer-task .taskChild .rightContainer-task__animation img {
   width: 1.6rem;
 }
+
+.rightContainer .rightContainer-card {
+  text-align: center;
+}
+
+.rightContainer .rightContainer-card .cardChild {
+  margin: 0 auto;
+  width: 85%;
+  height: 17rem;
+  position: relative;
+  background-color: #fafafa;
+  border-radius: 5px;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.rightContainer .rightContainer-card .cardChild:hover, .rightContainer .rightContainer-card .cardChild:active {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .rightContainer .rightContainer-card .cardChild {
+    height: 13rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rightContainer .rightContainer-card .cardChild {
+    width: 80%;
+    height: 14rem;
+  }
+}
+
+.rightContainer .rightContainer-card .cardChild .card-content {
+  width: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: left;
+}
+
+.rightContainer .rightContainer-card .cardChild .card-content p {
+  margin-left: 0.5rem;
+}
+
+.rightContainer .rightContainer-card .cardChild .card-content a img {
+  margin-left: 0.5rem;
+  margin-top: 1.5rem;
+  width: 1.5rem;
+}
+
+.rightContainer .rightContainer-card .cardChild .card-person {
+  width: 4.8rem;
+  height: 9.1rem;
+  position: absolute;
+  bottom: -14px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .rightContainer .rightContainer-card .cardChild .card-person {
+    width: 5.8rem;
+    height: 10.1rem;
+    bottom: -13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rightContainer .rightContainer-card .cardChild .card-person {
+    width: 6.8rem;
+    height: 11.1rem;
+    bottom: -13px;
+  }
+}
+
+.rightContainer .rightContainer-card .cardChild .card-circle-one {
+  width: 5rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.rightContainer .rightContainer-card .cardChild .card-circle-two {
+  width: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .rightContainer .rightContainer-card .cardChild .card-circle-two {
+    width: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rightContainer .rightContainer-card .cardChild .card-circle-two {
+    width: 6rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
