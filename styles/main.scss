@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   background-color: #f5f5fb;
   display: grid;
-  grid-template-columns: 10% 60% 30%;
+  grid-template-columns: 15% 55% 30%;
   align-items: center;
 
   @include query(768) {
@@ -54,10 +54,18 @@ body {
 }
 
 main {
-  height: calc(95% - 10px);
+  height: 100%;
   padding: 1.5rem 0.5rem;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
+
+  @include query(768) {
+    padding-top: 5rem;
+  }
+  @include query(1024) {
+    padding-top: 5rem;
+  }
 
   .searchbox {
     margin-bottom: 2.4rem;
@@ -136,7 +144,7 @@ main {
     @include cardAnimation(400ms);
 
     @include query(768) {
-      height: 19rem;
+      height: 21rem;
     }
     @include query(1024) {
       height: 23rem;
@@ -189,7 +197,7 @@ main {
       @include cardAnimation(400ms);
 
       @include query(768) {
-        height: 19rem;
+        height: 21rem;
       }
       @include query(1024) {
         height: 23rem;
@@ -233,7 +241,7 @@ main {
       @include cardAnimation(400ms);
 
       @include query(768) {
-        height: 19rem;
+        height: 21rem;
       }
       @include query(1024) {
         height: 23rem;
@@ -273,16 +281,20 @@ main {
 }
 
 .rightContainer {
-  height: calc(95% - 10px);
+  height: 100%;
   padding: 1rem;
+  padding-top: 2.5rem;
   display: flex;
   flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
 
   @include query(768) {
     padding: 1rem 2rem;
+    padding-top: 4.5rem;
   }
   @include query(1024) {
     padding: 1rem 4rem;
+    padding-top: 4.5rem;
   }
 
   .rightContainer-profile {

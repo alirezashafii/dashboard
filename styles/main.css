@@ -21,8 +21,8 @@ body {
   background-color: #f5f5fb;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% 60% 30%;
-      grid-template-columns: 10% 60% 30%;
+  -ms-grid-columns: 15% 55% 30%;
+      grid-template-columns: 15% 55% 30%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -91,8 +91,9 @@ body {
 }
 
 main {
-  height: calc(95% - 10px);
+  height: 100%;
   padding: 1.5rem 0.5rem;
+  padding-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,6 +101,18 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main {
+    padding-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding-top: 5rem;
+  }
 }
 
 main .searchbox {
@@ -201,7 +214,7 @@ main .design {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   main .design {
-    height: 19rem;
+    height: 21rem;
   }
 }
 
@@ -283,7 +296,7 @@ main section .photography {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   main section .photography {
-    height: 19rem;
+    height: 21rem;
   }
 }
 
@@ -349,7 +362,7 @@ main section .animation {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   main section .animation {
-    height: 19rem;
+    height: 21rem;
   }
 }
 
@@ -413,8 +426,9 @@ main section .animation .animation-second-row img {
 }
 
 .rightContainer {
-  height: calc(95% - 10px);
+  height: 100%;
   padding: 1rem;
+  padding-top: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,17 +436,20 @@ main section .animation .animation-second-row img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .rightContainer {
     padding: 1rem 2rem;
+    padding-top: 4.5rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .rightContainer {
     padding: 1rem 4rem;
+    padding-top: 4.5rem;
   }
 }
 
