@@ -90,6 +90,208 @@ body {
   }
 }
 
+.leftContainer {
+  height: 100%;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .leftContainer {
+    padding: 1rem 2rem;
+    padding-top: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .leftContainer {
+    padding: 1rem 4rem;
+    padding-top: 4.5rem;
+  }
+}
+
+.leftContainer .logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  color: #5e81f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leftContainer .logo img {
+  width: 3.5rem;
+  height: 3.5rem;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.leftContainer .logo img:hover, .leftContainer .logo img:active {
+  -webkit-transform: rotate(180deg) scale(1.03);
+          transform: rotate(180deg) scale(1.03);
+}
+
+.leftContainer .logo span {
+  margin-left: 1rem;
+}
+
+.leftContainer .join-btn {
+  width: 11.5rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: calc(1rem + 0.06vw);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #5e81f4;
+  -webkit-transition: background-color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+}
+
+.leftContainer .join-btn:hover, .leftContainer .join-btn:active {
+  background-color: rgba(94, 129, 244, 0.9);
+}
+
+.leftContainer .left-list {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leftContainer .left-list .left-list__focus span {
+  color: #5e81f4;
+}
+
+.leftContainer .left-list li {
+  width: 100%;
+  margin-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leftContainer .left-list li img {
+  width: 20px;
+}
+
+.leftContainer .left-list li span {
+  margin-left: 1rem;
+  color: #768492;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.leftContainer .left-list li span:hover, .leftContainer .left-list li span:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #5e81f4;
+}
+
+.leftContainer .upgrade {
+  width: 12rem;
+  height: 16rem;
+  padding: 1rem;
+  padding-top: 6rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  text-align: center;
+  background-color: #BFC9ED;
+  border-radius: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.leftContainer .upgrade img {
+  width: 5rem;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.leftContainer .upgrade p {
+  color: #768492;
+  font-size: 1.2rem;
+}
+
+.leftContainer .upgrade .upgrade-btn {
+  width: 8rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: calc(1rem + 0.06vw);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #5e81f4;
+  -webkit-transition: background-color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+}
+
+.leftContainer .upgrade .upgrade-btn:hover, .leftContainer .upgrade .upgrade-btn:active {
+  background-color: rgba(94, 129, 244, 0.9);
+}
+
+.leftContainer .appearance {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .leftContainer .appearance {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .leftContainer .appearance {
+    display: inline-block;
+  }
+}
+
 main {
   height: 100%;
   padding: 1.5rem 0.5rem;
@@ -113,6 +315,10 @@ main {
   main {
     padding-top: 5rem;
   }
+}
+
+main small {
+  font-weight: 300;
 }
 
 main .searchbox {
@@ -183,12 +389,27 @@ main .main-navigation ul {
 main .main-navigation ul li {
   margin-left: calc(0.5rem + 0.33vw);
   color: #768492;
-  -webkit-transition: color 200ms ease-in;
-  transition: color 200ms ease-in;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  position: relative;
 }
 
-main .main-navigation ul li:hover {
-  color: #000;
+main .main-navigation ul li:hover, main .main-navigation ul li:active {
+  color: #5e81f4;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+main .main-navigation ul li:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  background-color: #768492;
+  bottom: -5px;
+  left: 0;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+  width: 50%;
+  height: 2px;
 }
 
 main .design {
