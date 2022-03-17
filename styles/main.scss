@@ -32,6 +32,11 @@ body {
   }
 }
 
+::selection {
+  background-color: #5e81f4;
+  color: #fff;
+}
+
 @keyframes cardAnimation {
   0% {
     transform: scale(0.9);
@@ -131,6 +136,12 @@ body {
 
       img {
         width: 20px;
+        transition: all 250ms ease-in-out;
+
+        &:hover,
+        &:active {
+          transform: scale(1.2);
+        }
       }
 
       span {
@@ -157,10 +168,15 @@ body {
     text-align: center;
     background-color: #BFC9ED;
     border-radius: 5px;
+    transition: transform 250ms ease-in;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    &:hover {
+      transform: scale(1.03);
+    }
 
     img {
       width: 5rem;
@@ -237,6 +253,7 @@ main {
       padding: 0.5rem 1rem;
       width: 50%;
       transition: all 0.2s ease-in-out;
+      caret-color: #5e81f4;
 
       &:focus {
         width: 80%;
@@ -265,7 +282,8 @@ main {
     h3 {
       transition: color 200ms ease-in;
 
-      &:hover {
+      &:hover,
+      &:active {
         color: #768492;
         transform: scale(1.02);
       }
@@ -298,11 +316,23 @@ main {
         }
       }
     }
+
+    .show {
+      display: none;
+      margin-right: 0.4rem;
+
+      @include query(768) {
+        display: inline-block;
+      }
+      @include query(1024) {
+        display: inline-block;
+      }
+    }
   }
 
   .design {
     width: 100%;
-    height: 15rem;
+    height: 23.5%;
     background-image: url("../assets/images/uiux.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -322,7 +352,8 @@ main {
       height: 23rem;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       @include cardEffect;
     }
 
@@ -348,7 +379,7 @@ main {
 
   section {
     width: 100%;
-    height: auto;
+    height: 50%;
     display: flex;
     flex-direction: column;
     column-gap: 2.4rem;
@@ -357,7 +388,7 @@ main {
 
     .photography {
       width: 100%;
-      height: 15rem;
+      height: 50%;
       background-image: url("../assets/images/photography.png");
       background-repeat: no-repeat;
       background-size: cover;
@@ -375,7 +406,8 @@ main {
         height: 23rem;
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         @include cardEffect;
       }
 
@@ -401,7 +433,7 @@ main {
 
     .animation {
       width: 100%;
-      height: 15rem;
+      height: 50%;
       background-image: url("../assets/images/animation.png");
       background-repeat: no-repeat;
       background-size: cover;
@@ -419,7 +451,8 @@ main {
         height: 23rem;
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         @include cardEffect;
       }
 
@@ -483,6 +516,11 @@ main {
 
     p {
       margin-left: calc(0.5rem + 0.33vw);
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
     }
   }
 
@@ -651,7 +689,7 @@ main {
     .cardChild {
       margin: 0 auto;
       width: 85%;
-      height: 17rem;
+      height: 15rem;
       position: relative;
       background-color: #fafafa;
       border-radius: 5px;

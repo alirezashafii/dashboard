@@ -42,6 +42,16 @@ body {
   }
 }
 
+::-moz-selection {
+  background-color: #5e81f4;
+  color: #fff;
+}
+
+::selection {
+  background-color: #5e81f4;
+  color: #fff;
+}
+
 @-webkit-keyframes cardAnimation {
   0% {
     -webkit-transform: scale(0.9);
@@ -203,6 +213,13 @@ body {
 
 .leftContainer .left-list li img {
   width: 20px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.leftContainer .left-list li img:hover, .leftContainer .left-list li img:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .leftContainer .left-list li span {
@@ -230,6 +247,10 @@ body {
   text-align: center;
   background-color: #BFC9ED;
   border-radius: 5px;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,6 +262,11 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.leftContainer .upgrade:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .leftContainer .upgrade img {
@@ -339,6 +365,7 @@ main .searchbox input {
   width: 50%;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  caret-color: #5e81f4;
 }
 
 main .searchbox input:focus {
@@ -374,7 +401,7 @@ main .main-navigation h3 {
   transition: color 200ms ease-in;
 }
 
-main .main-navigation h3:hover {
+main .main-navigation h3:hover, main .main-navigation h3:active {
   color: #768492;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -412,9 +439,26 @@ main .main-navigation ul li:nth-child(1)::after {
   height: 2px;
 }
 
+main .main-navigation .show {
+  display: none;
+  margin-right: 0.4rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main .main-navigation .show {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .main-navigation .show {
+    display: inline-block;
+  }
+}
+
 main .design {
   width: 100%;
-  height: 15rem;
+  height: 23.5%;
   background-image: url("../assets/images/uiux.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -445,7 +489,7 @@ main .design {
   }
 }
 
-main .design:hover {
+main .design:hover, main .design:active {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
@@ -482,7 +526,7 @@ main .design .design-second-row img {
 
 main section {
   width: 100%;
-  height: auto;
+  height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,7 +542,7 @@ main section {
 
 main section .photography {
   width: 100%;
-  height: 15rem;
+  height: 50%;
   background-image: url("../assets/images/photography.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -527,7 +571,7 @@ main section .photography {
   }
 }
 
-main section .photography:hover {
+main section .photography:hover, main section .photography:active {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
@@ -564,7 +608,7 @@ main section .photography .photography-second-row img {
 
 main section .animation {
   width: 100%;
-  height: 15rem;
+  height: 50%;
   background-image: url("../assets/images/animation.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -593,7 +637,7 @@ main section .animation {
   }
 }
 
-main section .animation:hover {
+main section .animation:hover, main section .animation:active {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
@@ -695,6 +739,11 @@ main section .animation .animation-second-row img {
 
 .rightContainer .rightContainer-profile p {
   margin-left: calc(0.5rem + 0.33vw);
+}
+
+.rightContainer .rightContainer-profile a {
+  text-decoration: none;
+  color: #000;
 }
 
 .rightContainer .rightContainer-progress {
@@ -914,7 +963,7 @@ main section .animation .animation-second-row img {
 .rightContainer .rightContainer-card .cardChild {
   margin: 0 auto;
   width: 85%;
-  height: 17rem;
+  height: 15rem;
   position: relative;
   background-color: #fafafa;
   border-radius: 5px;
