@@ -58,6 +58,33 @@ body {
   }
 }
 
+@keyframes clickMe {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes footerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .leftContainer {
   height: 100%;
   padding: 1rem;
@@ -83,18 +110,49 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    img {
+    .toggler {
+      cursor: pointer;
       width: 3.5rem;
       height: 3.5rem;
       transition: transform 250ms ease-in-out;
 
+      @include query(768) {
+        display: none;
+      }
+      @include query(1024) {
+        display: none;
+      }
+
       &:hover,
       &:active {
-        transform: rotate(180deg) scale(1.03);
+        transform: scale(1.03);
       }
     }
 
-    span {
+    .toggler-secondary {
+      display: none;
+      cursor: pointer;
+
+      svg {
+        width: 3.5rem;
+        height: 3.5rem;
+        transition: transform 250ms ease-in-out;
+
+        &:hover,
+        &:active {
+          transform: rotate(180deg) scale(1.03);
+        }
+      }
+
+      @include query(768) {
+        display: inline-block;
+      }
+      @include query(1024) {
+        display: inline-block;
+      }
+    }
+
+    .logo-text {
       margin-left: 1rem;
     }
   }
@@ -131,6 +189,7 @@ body {
     li {
       width: 100%;
       margin-top: 2.5rem;
+      cursor: pointer;
       display: flex;
       align-items: center;
 
@@ -156,7 +215,7 @@ body {
         }
       }
     }
-  }  
+  }
 
   .upgrade {
     width: 12rem;
@@ -166,7 +225,7 @@ body {
     margin: 0 auto;
     margin-top: 3rem;
     text-align: center;
-    background-color: #BFC9ED;
+    background-color: #bfc9ed;
     border-radius: 5px;
     transition: transform 250ms ease-in;
     position: relative;
@@ -203,7 +262,7 @@ body {
       color: #fff;
       background-color: #5e81f4;
       transition: background-color 200ms ease-in;
-  
+
       &:hover,
       &:active {
         background-color: rgba(94, 129, 244, 0.9);
@@ -220,6 +279,32 @@ body {
     @include query(1024) {
       display: inline-block;
     }
+  }
+}
+
+.leftContainer-child {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.expanded .appearance {
+  display: inline-block;
+  z-index: 1;
+}
+.expanded .leftContainer-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  text-align: center;
+  padding-top: 2.5rem;
+  background-color: #fff;
+  z-index: 1;
+
+  .toggler {
+    animation: clickMe 1s linear 2s infinite;
   }
 }
 
@@ -263,6 +348,7 @@ main {
     svg {
       width: 2rem;
       height: 2.5rem;
+      cursor: pointer;
       stroke: #768492;
       transition: stroke 200ms ease-in;
 
@@ -280,6 +366,7 @@ main {
     justify-content: space-between;
 
     h3 {
+      cursor: pointer;
       transition: color 200ms ease-in;
 
       &:hover,
@@ -293,6 +380,7 @@ main {
       display: flex;
 
       li {
+        cursor: pointer;
         margin-left: calc(0.5rem + 0.33vw);
         color: #768492;
         transition: all 200ms ease-in;
@@ -331,8 +419,9 @@ main {
   }
 
   .design {
+    cursor: pointer;
     width: 100%;
-    height: 23.5%;
+    height: clamp(23.5%, 15rem, 23.4%);
     background-image: url("../assets/images/uiux.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -387,8 +476,9 @@ main {
     color: #fff;
 
     .photography {
+      cursor: pointer;
       width: 100%;
-      height: 50%;
+      height: clamp(50%, 15rem, 49.9%);
       background-image: url("../assets/images/photography.png");
       background-repeat: no-repeat;
       background-size: cover;
@@ -432,8 +522,9 @@ main {
     }
 
     .animation {
+      cursor: pointer;
       width: 100%;
-      height: 50%;
+      height: clamp(50%, 15rem, 49.9%);
       background-image: url("../assets/images/animation.png");
       background-repeat: no-repeat;
       background-size: cover;
@@ -516,6 +607,13 @@ main {
 
     p {
       margin-left: calc(0.5rem + 0.33vw);
+      cursor: pointer;
+      transition: transform 200ms ease-in;
+
+      &:hover,
+      &:active {
+        transform: scale(1.03);
+      }
     }
 
     a {
@@ -543,6 +641,7 @@ main {
       }
 
       label {
+        cursor: pointer;
         display: flex;
         column-gap: 0.4rem;
 
@@ -647,6 +746,7 @@ main {
   }
 
   .rightContainer-task {
+    height: clamp(17.5%, 12rem, 18%);
     margin-bottom: 4rem;
 
     h4 {
@@ -654,9 +754,11 @@ main {
     }
 
     .taskChild {
+      height: 75%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      justify-content: space-evenly;
       row-gap: 1.5rem;
 
       small {
@@ -666,6 +768,7 @@ main {
 
       .rightContainer-task__design,
       .rightContainer-task__animation {
+        cursor: pointer;
         display: flex;
         column-gap: 0.4rem;
 
@@ -687,6 +790,7 @@ main {
     text-align: center;
 
     .cardChild {
+      cursor: pointer;
       margin: 0 auto;
       width: 85%;
       height: 15rem;
@@ -767,3 +871,58 @@ main {
     }
   }
 }
+
+footer {
+  width: 100%;
+  height: 4%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+
+  .typography span {
+    opacity: 0;
+    letter-spacing: 3px;
+    color: #5e81f4;
+    transition: opacity 1300ms;
+    animation: footerAnimation 3s linear 1s infinite;
+
+    &:nth-child(1) {
+      animation-delay: 200ms;
+    }
+    &:nth-child(2) {
+      animation-delay: 1200ms;
+    }
+    &:nth-child(3) {
+      animation-delay: 800ms;
+    }
+    &:nth-child(4) {
+      animation-delay: 300ms;
+    }
+    &:nth-child(5) {
+      animation-delay: 700ms;
+    }
+    &:nth-child(6) {
+      animation-delay: 600ms;
+      margin-left: 1rem;
+    }
+    &:nth-child(7) {
+      animation-delay: 400ms;
+    }
+    &:nth-child(8) {
+      animation-delay: 900ms;
+    }
+    &:nth-child(9) {
+      animation-delay: 700ms;
+    }
+    &:nth-child(10) {
+      animation-delay: 50ms;
+    }
+    &:nth-child(11) {
+      animation-delay: 400ms;
+    }
+    &:nth-child(12) {
+      animation-delay: 500ms;
+    }
+  }
+}
+

@@ -100,6 +100,70 @@ body {
   }
 }
 
+@-webkit-keyframes clickMe {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes clickMe {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes footerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes footerAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .leftContainer {
   height: 100%;
   padding: 1rem;
@@ -145,7 +209,8 @@ body {
           align-items: center;
 }
 
-.leftContainer .logo img {
+.leftContainer .logo .toggler {
+  cursor: pointer;
   width: 3.5rem;
   height: 3.5rem;
   -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -154,12 +219,55 @@ body {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
-.leftContainer .logo img:hover, .leftContainer .logo img:active {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .leftContainer .logo .toggler {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .leftContainer .logo .toggler {
+    display: none;
+  }
+}
+
+.leftContainer .logo .toggler:hover, .leftContainer .logo .toggler:active {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.leftContainer .logo .toggler-secondary {
+  display: none;
+  cursor: pointer;
+}
+
+.leftContainer .logo .toggler-secondary svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.leftContainer .logo .toggler-secondary svg:hover, .leftContainer .logo .toggler-secondary svg:active {
   -webkit-transform: rotate(180deg) scale(1.03);
           transform: rotate(180deg) scale(1.03);
 }
 
-.leftContainer .logo span {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .leftContainer .logo .toggler-secondary {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .leftContainer .logo .toggler-secondary {
+    display: inline-block;
+  }
+}
+
+.leftContainer .logo .logo-text {
   margin-left: 1rem;
 }
 
@@ -203,6 +311,7 @@ body {
 .leftContainer .left-list li {
   width: 100%;
   margin-top: 2.5rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,7 +354,7 @@ body {
   margin: 0 auto;
   margin-top: 3rem;
   text-align: center;
-  background-color: #BFC9ED;
+  background-color: #bfc9ed;
   border-radius: 5px;
   -webkit-transition: -webkit-transform 250ms ease-in;
   transition: -webkit-transform 250ms ease-in;
@@ -318,6 +427,40 @@ body {
   }
 }
 
+.leftContainer-child {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.expanded .appearance {
+  display: inline-block;
+  z-index: 1;
+}
+
+.expanded .leftContainer-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  text-align: center;
+  padding-top: 2.5rem;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.expanded .leftContainer-child .toggler {
+  -webkit-animation: clickMe 1s linear 2s infinite;
+          animation: clickMe 1s linear 2s infinite;
+}
+
 main {
   height: 100%;
   padding: 1.5rem 0.5rem;
@@ -375,6 +518,7 @@ main .searchbox input:focus {
 main .searchbox svg {
   width: 2rem;
   height: 2.5rem;
+  cursor: pointer;
   stroke: #768492;
   -webkit-transition: stroke 200ms ease-in;
   transition: stroke 200ms ease-in;
@@ -397,6 +541,7 @@ main .main-navigation {
 }
 
 main .main-navigation h3 {
+  cursor: pointer;
   -webkit-transition: color 200ms ease-in;
   transition: color 200ms ease-in;
 }
@@ -414,6 +559,7 @@ main .main-navigation ul {
 }
 
 main .main-navigation ul li {
+  cursor: pointer;
   margin-left: calc(0.5rem + 0.33vw);
   color: #768492;
   -webkit-transition: all 200ms ease-in;
@@ -457,8 +603,9 @@ main .main-navigation .show {
 }
 
 main .design {
+  cursor: pointer;
   width: 100%;
-  height: 23.5%;
+  height: clamp(23.5%, 15rem, 23.4%);
   background-image: url("../assets/images/uiux.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -541,8 +688,9 @@ main section {
 }
 
 main section .photography {
+  cursor: pointer;
   width: 100%;
-  height: 50%;
+  height: clamp(50%, 15rem, 49.9%);
   background-image: url("../assets/images/photography.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -607,8 +755,9 @@ main section .photography .photography-second-row img {
 }
 
 main section .animation {
+  cursor: pointer;
   width: 100%;
-  height: 50%;
+  height: clamp(50%, 15rem, 49.9%);
   background-image: url("../assets/images/animation.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -739,6 +888,16 @@ main section .animation .animation-second-row img {
 
 .rightContainer .rightContainer-profile p {
   margin-left: calc(0.5rem + 0.33vw);
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 200ms ease-in;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+}
+
+.rightContainer .rightContainer-profile p:hover, .rightContainer .rightContainer-profile p:active {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .rightContainer .rightContainer-profile a {
@@ -774,6 +933,7 @@ main section .animation .animation-second-row img {
 }
 
 .rightContainer .rightContainer-progress form label {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -900,6 +1060,7 @@ main section .animation .animation-second-row img {
 }
 
 .rightContainer .rightContainer-task {
+  height: clamp(17.5%, 12rem, 18%);
   margin-bottom: 4rem;
 }
 
@@ -908,6 +1069,7 @@ main section .animation .animation-second-row img {
 }
 
 .rightContainer .rightContainer-task .taskChild {
+  height: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -918,6 +1080,9 @@ main section .animation .animation-second-row img {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   row-gap: 1.5rem;
 }
 
@@ -928,6 +1093,7 @@ main section .animation .animation-second-row img {
 
 .rightContainer .rightContainer-task .taskChild .rightContainer-task__design,
 .rightContainer .rightContainer-task .taskChild .rightContainer-task__animation {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -961,6 +1127,7 @@ main section .animation .animation-second-row img {
 }
 
 .rightContainer .rightContainer-card .cardChild {
+  cursor: pointer;
   margin: 0 auto;
   width: 85%;
   height: 15rem;
@@ -1059,5 +1226,84 @@ main section .animation .animation-second-row img {
   .rightContainer .rightContainer-card .cardChild .card-circle-two {
     width: 6rem;
   }
+}
+
+footer {
+  width: 100%;
+  height: 4%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+footer .typography span {
+  opacity: 0;
+  letter-spacing: 3px;
+  color: #5e81f4;
+  -webkit-transition: opacity 1300ms;
+  transition: opacity 1300ms;
+  -webkit-animation: footerAnimation 3s linear 1s infinite;
+          animation: footerAnimation 3s linear 1s infinite;
+}
+
+footer .typography span:nth-child(1) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+footer .typography span:nth-child(2) {
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+
+footer .typography span:nth-child(3) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+footer .typography span:nth-child(4) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+footer .typography span:nth-child(5) {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+}
+
+footer .typography span:nth-child(6) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+  margin-left: 1rem;
+}
+
+footer .typography span:nth-child(7) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+footer .typography span:nth-child(8) {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+footer .typography span:nth-child(9) {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+}
+
+footer .typography span:nth-child(10) {
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+}
+
+footer .typography span:nth-child(11) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+footer .typography span:nth-child(12) {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 /*# sourceMappingURL=main.css.map */
