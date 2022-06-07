@@ -446,14 +446,13 @@ body {
 
 .expanded .leftContainer-child {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0 auto 0 0;
   width: 45%;
   height: 100%;
   text-align: center;
   padding-top: 2.5rem;
   background-color: #fff;
-  z-index: 1;
+  z-index: 2;
 }
 
 .expanded .leftContainer-child .toggler {
@@ -1230,10 +1229,11 @@ main section .animation .animation-second-row img {
 
 footer {
   width: 100%;
-  height: 4%;
+  height: 30px;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  z-index: 1;
 }
 
 footer .typography span {
