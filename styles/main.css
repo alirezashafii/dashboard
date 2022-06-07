@@ -446,9 +446,10 @@ body {
 
 .expanded .leftContainer-child {
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 45%;
-  height: 100%;
+  inset: 10px auto 10px 10px;
+  width: calc(45% - 6vw);
+  height: 600px;
+  border-radius: 10px;
   text-align: center;
   padding-top: 2.5rem;
   background-color: #fff;
@@ -500,6 +501,7 @@ main .searchbox {
 }
 
 main .searchbox input {
+  font-size: 1.6rem;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -1228,9 +1230,18 @@ main section .animation .animation-second-row img {
 }
 
 footer {
+  background-color: #f5f5fb;
   width: 100%;
-  height: 30px;
-  text-align: center;
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   bottom: 0;
   z-index: 1;
